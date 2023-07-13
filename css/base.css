@@ -1,0 +1,154 @@
+:root {
+    font-family: Inter, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+header button {
+    padding: calc(0.25em + 0.5 * (100vw / 120)) calc(0.5em + 0.5 * (100vw / 120));
+    font-size: calc(0.6em + 0.5 * (100vw / 120));
+    border-radius: 10px;
+    border: solid 1px #000;
+}
+
+header button:enabled {
+    color: rgb(100, 100, 100);
+}
+
+header button:hover:not(:disabled) {
+    cursor: pointer;
+}
+
+header button.selected {
+    background-color: rgb(200, 180, 50);
+    color: #000;
+}
+
+body {
+    display: grid;
+    grid-row-gap: 5em;
+}
+
+#table__title {
+    font-size: calc(1em + 0.5 * (100vw / 120));
+    text-align: center;
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
+.table__wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-data-block {
+    position: relative;
+}
+
+#input-data-block button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: calc(0.5em + 0.5 * (100vw / 120)) calc(1em + 4 * (100vw / 120));
+    border-radius: 20px;
+    border: none;
+    font-size: calc(0.5em + 0.5 * (100vw / 120));
+    box-shadow: 0 0 2px rgb(50, 75, 115);
+}
+
+#input-data-block button:hover {
+    background-color: rgb(50, 75, 115);
+    color: #fff;
+}
+
+.task-table {
+    width: 80%;
+    border: solid 1px rgb(50, 150, 200);
+    box-shadow: 1px 2px 4px rgb(50, 150, 200);
+    border-radius: 10px;
+    background-color: rgb(200, 200, 200);
+}
+
+.table-row {
+    display: grid;
+    grid-row-gap: 0.5em;
+}
+
+div#maximum-table .table-row {
+    grid-template-columns: 1fr repeat(4, minmax(50px, 1fr));
+}
+
+div#minimum-table .table-row {
+    grid-template-columns: 1fr repeat(5, minmax(50px, 1fr));
+}
+
+.table-row p.row-title {
+    display: grid;
+    justify-content: center;
+    font-size: calc(0.6em + 0.5 * (100vw / 120));
+}
+
+.table-data p {
+    text-align: center;
+}
+
+.table-data input {
+    padding: 0.25em;
+    outline: none;
+    border-radius: 10px;
+    min-width: 100px;
+    font-size: calc(0.5em + 0.5 * (100vw / 120));
+}
+
+.table-data input:focus {
+    border-color: rgb(100, 150, 230);
+    box-shadow: 0 0 2px rgb(100, 150, 230);
+}
+
+.table-column {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.table-column * {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: calc(0.8em + 0.3 * (100vw / 120));
+}
+
+#output-data-block {
+    display: grid;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+#output-data-block p.output-paragraph {
+    color: rgb(100, 100, 100);
+    font-size: 1.5em;
+    margin: 1rem 0;
+}
+
+#output-data-block p#final-res {
+    font-weight: 600;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media screen and (max-width: 967px) {
+    header {
+        flex-direction: column;
+        row-gap: 1em;
+    }
+}
+

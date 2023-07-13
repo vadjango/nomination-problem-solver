@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача про призначення</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+    <header>
+        <button class="selected" id="max-button" disabled>Максимальна кількість зібраних комп'ютерів</button>
+        <button id="min-button">Мінімальні затрати часу при розробці сайту</button>
+    </header>
+    <main>
+        <div id="table__title">Максимальна кількість зібраних комп'ютерів</div>
+        <div class="table__wrapper">
+            <div id="input-data-block">
+                <!-- Maximum table -->
+                <div class="task-table" id="maximum-table">
+                    <div class="table-row">
+                        <div class="table-column">
+                            <div class="table-data"></div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="column-title">Серверний комп'ютер, шт/день</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="column-title">Комп'ютер для розробки програм ШІ, шт/день</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="column-title">Комп'ютер для відеоігор, шт/день</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="column-title">Комп'ютер для офісу, шт/день</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="row-title">Працівник 1</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="row-title">Працівник 2</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="row-title">Працівник 3</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="row-title">Працівник 4</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="maximum-input" value="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Minimum table -->
+                <div class="task-table hidden" id="minimum-table">
+                    <div class="table-row">
+                        <div class="table-column">
+                            <div class="table-data"></div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="column-title">Розробка моделі БД, год</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="column-title">Створення дизайну головної сторінки, год</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="column-title">Створення серверної логіки, год</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="column-title">Створення тестів, год</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="column-title">Ревью коду, год</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="row-title">Програміст 1</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="row-title">Програміст 2</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="row-title">Програміст 3</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="row-title">Програміст 4</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-column">
+                            <div class="table-data">
+                                <p class="row-title">Програміст 5</p>
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                        <div class="table-column">
+                            <div class="table-data">
+                                <input type="text" class="minimum-input" value="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="calculate-button">Обчислити</button>
+            </div>
+            <div id="output-data-block">
+                <p id="final-res"></p>
+            </div>
+        </div>
+    </main>
+    <script src="js/assignment_problem.js"></script>
+</body>
+</html>
+
